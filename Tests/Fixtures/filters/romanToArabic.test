@@ -1,0 +1,9 @@
+--TEST--
+"roman_to_arabic" filter
+--TEMPLATE--
+{{ numeral|roman_to_arabic }}
+{{ empty|roman_to_arabic }}
+--DATA--
+return ['numeral' => 'IV', 'empty' => '']
+--EXPECT--
+4

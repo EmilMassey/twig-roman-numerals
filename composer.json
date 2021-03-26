@@ -1,0 +1,42 @@
+{
+  "name": "emilmassey/twig-roman-numerals",
+  "type": "library",
+  "description": "A Twig extension for converting roman to arabic numerals and vice-versa",
+  "keywords": [
+    "twig",
+    "numerals"
+  ],
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Emil Masiakowski",
+      "email": "emil@rainbowbrains.pl",
+      "homepage": "http://emil.rainbowbrains.pl"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "twig/twig": "^2.4|^3.0",
+    "wandersonwhcr/romans": "^1.3"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "EmilMassey\\Twig\\RomanNumerals\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EmilMassey\\Twig\\RomanNumerals\\Tests\\": "Tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/simple-phpunit --configuration phpunit.xml.dist --filter \"/::testIntegration( .*)?$/\" --test-suffix IntegrationTests.php Tests"
+  }
+}

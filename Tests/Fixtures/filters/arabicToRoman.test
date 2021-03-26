@@ -1,0 +1,9 @@
+--TEST--
+"arabic_to_roman" filter
+--TEMPLATE--
+{{ numeral|arabic_to_roman }}
+{{ empty|arabic_to_roman }}
+--DATA--
+return ['numeral' => '11', 'empty' => '']
+--EXPECT--
+XI
